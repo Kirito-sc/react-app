@@ -1,4 +1,7 @@
-import Icon from './Cardwidget';
+import React from "react";
+import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
+import Cardwidget from "./Cardwidget";
+
 
 
 const NavBar = () => {
@@ -7,21 +10,25 @@ const NavBar = () => {
     <>
       <div className="navbar-nav mx-auto barra">
 
-        <h1 className="text-center">E-Commerece</h1>
+        <h1 className="text-center title">E-Commerece</h1>
 
         {/* Coloco el icono traido de Cartwidget */}
 
-        <p className="text-start"> <Icon></Icon> </p>
+       
 
+        <div className='navItems'>
 
-        <div className="container barra">
-          <div className="navItems">
-            <p> <a href="#" className="">Productos</a></p>
-            <p><a href="#" className="">Contactos</a></p>
-            <p><a href="#" className="">Talles</a></p>
-            <p><a href="#" className="text-end">Envios</a></p>
+        <p className="text-start">  <Cardwidget /></p>
+          <a href="#" className="linksNav">Productos</a>
+          <a href="#" className="linksNav">Contactos</a>
+          <a href="#" className="linksNav">Talles</a>
+          <a href="#" className="linksNav">Envios</a>
 
-          </div>
+          {/* <Link to="/pages/Home" className="nav-link">Productos</Link> */}
+       {/*    <NavLink to={'/contactos/'} className="nav-link">Contactos</NavLink>
+          <NavLink to={'/talles/'} className="nav-link">Talles</NavLink>
+          <NavLink to={'/envios/'} className="nav-link">Envios</NavLink> */}
+
         </div>
 
       </div>
