@@ -1,34 +1,32 @@
-
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
-
-//import Carrusel from './components/Carrusel';
-import NavBar from './components/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home'
+import ItemDetailContainer from './container/ItemDetailContainer';
 import ItemListContainer from './container/ItemListContainer';
+import NavBar from './components/NavBar';
+import DetailPage from './pages/DetailPage'
 
 
 function App() {
   return <>
- <NavBar/>
-  <ItemListContainer />
 
-  <BrowserRouter>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route index element={<Home/>}></Route>
 
-  <Routes>
-  <Route path='/'></Route>
-  <Route path='productos'></Route>
-  <Route path='contactos'></Route>
-  <Route path='talles'></Route>
-  <Route path='envios'></Route>
+        <Route path='category' element={<DetailPage/>}>
+            <Route path=':id' element={<DetailPage/>}></Route>
+        </Route>
 
-  <Route></Route>
+        <Route path='item' element={<ItemDetailContainer/>}>
+            <Route path=':id' element={<ItemDetailContainer/>}></Route>
+        </Route>
+      </Routes>
 
-  </Routes>
-  
-  
-  </BrowserRouter>
-{/* <Carrusel/> */}
+
+    </BrowserRouter>
+    {/* <Carrusel/> */}
 
 
   </>

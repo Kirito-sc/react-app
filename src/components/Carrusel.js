@@ -1,10 +1,12 @@
 import React from 'react'
 import Icon from './Cardwidget'
 
+
+// NO ESTA EN USO TODAVIA 
+// NO ESTA EN USO TODAVIA
+// NO ESTA EN USO TODAVIA
+
 const Carrusel = () => {
-
-
-
 
   return <>
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">

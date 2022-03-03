@@ -6,6 +6,7 @@
 
 .title {
     font-size: 2em;
+    padding: 0.2em
 }
 
 .barra {
@@ -25,13 +26,15 @@
     text-align: center;
     border-bottom: 1px solid;
     width: 20%;
-    padding-top: 3rem;
     display: flex;
 }
 
 .linksNav {
     width: 20%;
     margin: 40px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 1vh;
 }
 
 .textCard {
@@ -42,7 +45,7 @@
     display: inline;
 }
 
-img {
+.img {
     height: 40vh;
     width: 70vw;
 }
@@ -51,8 +54,42 @@ img {
     margin: 40px;
 }
 
-.button {
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0px;
+
+/*  detail */
+
+.detail {
+    text-align: center;
+    align-items: flex-end;
+}
+
+.image {
+    height: 50vh;
+    margin-left: 2rem;
+    width: 35vw;
+    display: block;
+}
+
+.image-Detail {
+    height: 10vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.description {
+    margin: 1rem;
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+.contieneDetail {
+    background: rgb(236, 224, 224);
+    display: flex;
+    padding: 2rem;
+}
+
+.buttonDetail {
+    padding: 2px;
+    margin-bottom: 15rem;
+    margin-left: 3rem;
+    background-color: blueviolet;
 }
