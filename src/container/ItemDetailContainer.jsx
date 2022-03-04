@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import Spinner from '../components/Spinner';
 import ItemDetail from './ItemDetail';
 
 
@@ -28,7 +29,8 @@ const ItemDetailContainer = () => {
         /*uso de fetch API*/
         fetch(url)
             .then(resp => resp.json())
-            .then(data => setProducts(data.filter(item => item.id == id)))
+            
+            .then(data => setProducts(data.filter(item => item.id == id)))// filtra los id de producto
             .catch(err => console.log(err))
 
 
@@ -37,8 +39,8 @@ const ItemDetailContainer = () => {
         <>
             {
                 //  si el array tiene algo lo muestra sino muestra cargando
-                products.map(item => <ItemDetail key={item.id} item={item} />)
-
+                products.length > 0 ? products.map(item => <ItemDetail key={item.id} item={item} />) : <Spinner/>
+              
 
 
             }

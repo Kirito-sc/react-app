@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from './Cardwidget'
+
 
 
 // NO ESTA EN USO TODAVIA 

@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import ItemDetailContainer from './container/ItemDetailContainer';
 import ItemListContainer from './container/ItemListContainer';
 import NavBar from './components/NavBar';
-import DetailPage from './pages/DetailPage'
+
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route index element={<Home/>}></Route>
 
-        <Route path='category' element={<DetailPage/>}>
-            <Route path=':id' element={<DetailPage/>}></Route>
+        <Route path='category' element={<ItemListContainer/>}>
+            <Route path=':categoryId' element={<ItemListContainer/>}></Route>
         </Route>
 
         <Route path='item' element={<ItemDetailContainer/>}>
