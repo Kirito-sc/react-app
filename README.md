@@ -13,7 +13,7 @@ Seleccionando con un click la opcion "productos", se puede filtrar los productos
 Seleccionando "inicio" nos dirige a la pagina principal donde se puede observar la lista de productos en su totalidad.
 
 ## Demo
-
+react-app.gif
 
 ## Autor:
 Castillo Sergio
