@@ -7,11 +7,14 @@ import NavBar from './components/NavBar';
 
 
 
+
 function App() {
   return <>
 
     <BrowserRouter>
       <NavBar/>
+     
+
       <Routes>
         <Route index element={<Home/>}></Route>
 

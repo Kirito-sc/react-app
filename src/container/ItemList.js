@@ -19,17 +19,10 @@ const ItemList = ({categoryId }) => {
         /*uso de fetch API*/
         fetch(url)
             .then(resp => resp.json())
-            .then(data => {
-
-
-                if (categoryId) {
-                    setProducts(data.filter(item => item.categoria ===categoryId))
-                }
-                else {
-                    setProducts(data)
-                }
-
-            })
+            .then(data => { 
+                (categoryId)?setProducts(data.filter(item => item.categoria ===categoryId)): setProducts(data )
+            }) //filtra las categorias del array cuando carga la API
+           
     }
 
 

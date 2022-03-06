@@ -13,6 +13,10 @@
     background: blueviolet;
 }
 
+.list {
+    width: 10%;
+}
+
 .icono {
     float: right;
 }
@@ -96,4 +100,11 @@
 
 .spinner {
     margin-top: 8rem;
+}
+
+
+/* nabvar */
+
+.nav-link {
+    color: white;
 }
