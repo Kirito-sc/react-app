@@ -96,6 +96,7 @@
     margin-bottom: 15rem;
     margin-left: 3rem;
     background-color: blueviolet;
+    white-space: 100%;
 }
 
 .spinner {
@@ -107,4 +108,10 @@
 
 .nav-link {
     color: white;
+}
+
+.buttonCount {
+    display: flex;
+    justify-content: center;
+    height: 40px;
 }

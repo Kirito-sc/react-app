@@ -4,19 +4,24 @@ import Home from './pages/Home'
 import ItemDetailContainer from './container/ItemDetailContainer';
 import ItemListContainer from './container/ItemListContainer';
 import NavBar from './components/NavBar';
+import {CartContextProvider} from './context/CartContext'
+import Cart from './pages/Cart';
 
 
 
 
 function App() {
   return <>
+  <CartContextProvider>
 
-    <BrowserRouter>
+  <BrowserRouter>
       <NavBar/>
      
 
       <Routes>
         <Route index element={<Home/>}></Route>
+
+        <Route path='cart' element={<Cart/>}></Route>
 
         <Route path='category' element={<ItemListContainer/>}>
             <Route path=':categoryId' element={<ItemListContainer/>}></Route>
@@ -31,6 +36,9 @@ function App() {
     </BrowserRouter>
     {/* <Carrusel/> */}
 
+
+
+  </CartContextProvider>
 
   </>
 }

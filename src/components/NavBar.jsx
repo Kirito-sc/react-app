@@ -28,11 +28,9 @@ const NavBar = () => {
           </NavDropdown>
 
           <Link to="Contactos" className="nav-link linksNav ">Contactos</Link>
-          <Link to="contactos" className="nav-link linksNav" navbarLetter>Talles</Link>
+          <Link to="contactos" className="nav-link linksNav">Talles</Link>
           <Link to="contactos" className="nav-link linksNav">Envios</Link>
-          {/*    <NavLink to={'/contactos/'} className="nav-link">Contactos</NavLink>
-          <NavLink to={'/talles/'} className="nav-link">Talles</NavLink>
-          <NavLink to={'/envios/'} className="nav-link">Envios</NavLink> */}
+         
 
         </div>
 
