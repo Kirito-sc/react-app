@@ -8,7 +8,9 @@ import ItemCount from "../components/ItemCount"
 const ItemDetail = ({ item }) => {
 
 
-  const { addItem, clearCart } = useContext(CartContext);
+  const { addItem, clearCart, getItemInCart } = useContext(CartContext);
+
+  let newStock = item.stock;
 
   const [isInCart, setIsInCart] = useState(false);
 
@@ -17,6 +19,9 @@ const ItemDetail = ({ item }) => {
     setIsInCart(true);
   }
 
+  let itemInCart = getItemInCart(item.id);
+
+  if (itemInCart){newStock=item.stock-itemInCart.qty}
 
   return (
 
@@ -43,14 +48,14 @@ const ItemDetail = ({ item }) => {
 
       <div className="">
 
-        <p className="text-center">Stock disponible: {item.stock} </p>
+        <p className="text-center">Stock disponible: {newStock} </p>
         <h5 className="text-center title">${item.precio} </h5>
 
 
         <button onClick={clearCart} className="btn btn-primary">Vaciar Carrito</button>
 
-        {isInCart ? <Link to="/cart"><button className="btn btn-primary">Terminar Compra</button> </Link> :
-          <p className="card-subtitle"> < ItemCount addToCart={addToCart} stock={item.stock} /></p>
+        {isInCart ? <Link to="/cart"  className="buttonCount"><button className="btn btn-primary">Terminar Compra</button> </Link> :
+          <p className="card-subtitle"> < ItemCount addToCart={addToCart} stock={newStock} /></p>
         }
 
       </div>

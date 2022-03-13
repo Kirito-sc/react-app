@@ -7,18 +7,17 @@ import Cardwidget from "./Cardwidget";
 
 const NavBar = () => {
 
+
+ 
   return (
     <>
       <div className="navbar-nav mx-auto barra">
 
         <h1 className="text-center title">E-Commerce</h1>
 
-     
-
-
 
         <div className='navItems'>
-             
+          
           <Link to='/' className=""><Cardwidget /></Link>  {/* Coloco el icono traido de Cartwidget */}
           <Link to='/' className="nav-link linksNav">Inicio</Link>
           <NavDropdown className="nav-link linksNav" title ="Productos" id="nav-dropdown" >

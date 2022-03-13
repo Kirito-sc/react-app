@@ -25,11 +25,11 @@ export const CartContextProvider = ({ children }) => {
     }
 
 
-    const isItemInCart = (id) => { itemsCart.some(itemInCart => itemInCart.id == id) }
+    const isItemInCart = (id) => { 
+        return itemsCart.some(inCar =>inCar.id == id) }
 
-
-
-
+    const getItemInCart = (id) => { 
+            return itemsCart.find(inCar =>inCar.id == id) } 
 
     const clearCart = () => {
         setItemsCart([]);
@@ -38,7 +38,7 @@ export const CartContextProvider = ({ children }) => {
 
 
     return (
-        <CartContext.Provider value={{ addItem, itemsCart, clearCart }}>    {/*  es la funcion CartContext con el atributo provider que ya viene en react */}
+        <CartContext.Provider value={{ addItem, itemsCart,getItemInCart, clearCart}}>    {/*  es la funcion CartContext con el atributo provider que ya viene en react */}
             {children}
 
         </CartContext.Provider>
